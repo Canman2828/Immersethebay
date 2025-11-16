@@ -28,29 +28,29 @@ public class SpellCard : Card
     /// Called when card is thrown onto the battlefield
     /// </summary>
     public void ActivateAtPosition(Vector3 worldPosition)
+{
+    if (!canUse)
     {
-        if (!canUse)
-        {
-            Debug.LogWarning($"{cardName} is still on cooldown");
-            return;
-        }
-
-        switch (spellType)
-        {
-            case SpellType.AOE:
-                ActivateAOE(worldPosition);
-                break;
-            case SpellType.Buff:
-                ActivateBuff(worldPosition);
-                break;
-            case SpellType.Heal:
-                ActivateHeal(worldPosition);
-                break;
-            case SpellType.Special:
-                ActivateSpecial(worldPosition);
-                break;
-        }
+        Debug.LogWarning($"{cardName} is still on cooldown");
+        return;
     }
+
+    switch (spellType)
+    {
+        case SpellType.AOE:
+            ActivateAOE(worldPosition);
+            break;
+        case SpellType.Buff:
+            ActivateBuff(worldPosition);
+            break;
+        case SpellType.Heal:
+            ActivateHeal(worldPosition);
+            break;
+        case SpellType.Special:
+            ActivateSpecial(worldPosition);
+            break;
+    }
+}
 
     private void ActivateAOE(Vector3 targetPosition)
     {

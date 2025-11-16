@@ -54,6 +54,34 @@ public class Ally : MonoBehaviour
         UpdateHealthDisplay();
     }
 
+    private AnimationStateController anim;
+
+private void Awake()
+{
+    anim = GetComponent<AnimationStateController>();
+}
+
+private void Start()
+{
+    if (towerManager == null)
+    {
+        towerManager = FindObjectOfType<TowerManager>();
+        if (towerManager != null)
+        {
+            towerManager.RegisterAlly(this);
+        }
+    }
+
+    inactivityTimer = 0f;
+    timeSinceLastAttack = 0f;
+    hasBeenEngaged = false;
+
+    if (healthFillImage == null)
+        healthFillImage = GetComponentInChildren<UnityEngine.UI.Image>();
+
+    UpdateHealthDisplay();
+}
+
     private void Update()
     {
         if (!isActive) return;
