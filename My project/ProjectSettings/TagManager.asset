@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Ground
   - AphroditeCard
+  - Walkable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Walkable
   - Water
   - UI
   - 
