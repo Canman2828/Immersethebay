@@ -76,5 +76,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 926577876143399792}
   m_SourcePrefab: {fileID: 100100000, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4, type: 3}
+--- !u!1 &2354559022490678544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3201068835577940033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &926577876143399792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354559022490678544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d797431d3e08fc4489bb39f7d5422d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardName: Griffon
+  cardArt: {fileID: 0}
+  allyPrefab: {fileID: 4416428969059591239, guid: 7e4155cea37e5984d9b3aa99885eed22,
+    type: 3}
+  manaCost: 1

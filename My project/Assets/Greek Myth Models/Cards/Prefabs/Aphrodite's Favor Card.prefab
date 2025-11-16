@@ -10,6 +10,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.1136806
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1136806
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -58,6 +73,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -71,5 +91,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1504812119997337606}
   m_SourcePrefab: {fileID: 100100000, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4, type: 3}
+--- !u!1 &2952258351934634896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e5f52fedf8bf974eb338c3b3b2ca1f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2610379717059233473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1504812119997337606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952258351934634896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc959ad64a90f04aa17ee51d661e027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardName: Aphrodite's Favor
+  cardArt: {fileID: 0}
+  spellType: 2
+  potency: 25
+  radius: 5
+  duration: 5
+  manaCost: 1
