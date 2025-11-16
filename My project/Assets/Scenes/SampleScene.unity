@@ -1431,6 +1431,49 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &369333014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac8b2dde9d11902479d4d9e820906a13,
+    type: 3}
+  m_PrefabInstance: {fileID: 886036722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &369333018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369333014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c9242771116004a969a435a0232ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 120
+  healthFillImage: {fileID: 735298896}
+  worldCanvas: {fileID: 760074028}
+--- !u!64 &369333019
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369333014}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7027636043351174211, guid: ac8b2dde9d11902479d4d9e820906a13, type: 3}
 --- !u!1 &376545670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 376545671}
+  - component: {fileID: 376545672}
   m_Layer: 0
   m_Name: Card Manager
   m_TagString: Untagged
@@ -1462,6 +1506,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376545672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376545670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcf5aebc6cbddf4a859dbd88f9e9841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  summonCardPrefabs:
+  - {fileID: 490180459}
+  - {fileID: 0}
+  - {fileID: 2142634639}
+  spellCardPrefabs: []
+--- !u!1 &378521548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9047350918714406544, guid: 17c92b66eed435f46802631b936c4fb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1608275728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &378521552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378521548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 258904e09eeb51d4ea7496b13d00b1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 1098307291}
+  - {fileID: 508556597}
+  - {fileID: 2083579530}
+  - {fileID: 1231199372}
+  waitTimeAtPoint: 0
+--- !u!195 &378521553
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378521548}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2.1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 360
+  m_StoppingDistance: 0.2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 0
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,7 +2724,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ac8b2dde9d11902479d4d9e820906a13,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 369333018}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ac8b2dde9d11902479d4d9e820906a13,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 369333019}
   m_SourcePrefab: {fileID: 100100000, guid: ac8b2dde9d11902479d4d9e820906a13, type: 3}
 --- !u!1001 &932258027
 PrefabInstance:
@@ -4290,6 +4405,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395986421}
   m_CullTransparentMesh: 1
+--- !u!1 &1419671503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419671505}
+  - component: {fileID: 1419671504}
+  - component: {fileID: 1419671506}
+  m_Layer: 0
+  m_Name: Enemy Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1419671504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419671503}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11eea03261ec76a4c893810f990db251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  werewolfPrefab: {fileID: 1384934686}
+  harpyPrefab: {fileID: 1231076813}
+  cerberusPrefab: {fileID: 378521548}
+  spawnPoint: {fileID: 1098307291}
+  pathPoints:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1.458}
+  initialSpawnRate: 1.5
+  minSpawnRate: 0.3
+--- !u!4 &1419671505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419671503}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.267574, y: 3.4580784, z: -0.8454715}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1419671506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419671503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03652f882388b974a86d32129ead66fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 1098307291}
+  - {fileID: 508556597}
+  - {fileID: 2083579530}
+  - {fileID: 1231199372}
 --- !u!1001 &1435680888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4414,7 +4601,7 @@ PrefabInstance:
     - target: {fileID: 8558375401535499306, guid: 17c92b66eed435f46802631b936c4fb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.381
+      value: 4.702
       objectReference: {fileID: 0}
     - target: {fileID: 8558375401535499306, guid: 17c92b66eed435f46802631b936c4fb4,
         type: 3}
@@ -4424,7 +4611,7 @@ PrefabInstance:
     - target: {fileID: 8558375401535499306, guid: 17c92b66eed435f46802631b936c4fb4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.672
       objectReference: {fileID: 0}
     - target: {fileID: 8558375401535499306, guid: 17c92b66eed435f46802631b936c4fb4,
         type: 3}
@@ -4469,7 +4656,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9047350918714406544, guid: 17c92b66eed435f46802631b936c4fb4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 378521553}
+    - targetCorrespondingSourceObject: {fileID: 9047350918714406544, guid: 17c92b66eed435f46802631b936c4fb4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 378521552}
   m_SourcePrefab: {fileID: 100100000, guid: 17c92b66eed435f46802631b936c4fb4, type: 3}
 --- !u!1001 &1611682234
 PrefabInstance:
@@ -6845,7 +7040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5044652f8dba9c14b9e61d3777bdaf82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerManager: {fileID: 0}
+  towerManager: {fileID: 369333018}
   enemySpawner: {fileID: 0}
   cardManager: {fileID: 0}
 --- !u!4 &2125636174
@@ -6924,3 +7119,4 @@ SceneRoots:
   - {fileID: 932258027}
   - {fileID: 1608275728}
   - {fileID: 1282734004}
+  - {fileID: 1419671505}
