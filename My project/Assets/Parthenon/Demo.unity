@@ -725,15 +725,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 03:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b74771a3ef58a914f994cb5057589a39, type: 2}
+  m_sharedMaterial: {fileID: 7236876557520137178, guid: b74771a3ef58a914f994cb5057589a39,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4293984030
+  m_fontColor: {r: 0.11792451, g: 1, b: 0.9402903, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -813,7 +814,7 @@ GameObject:
   - component: {fileID: 1559170301}
   - component: {fileID: 1559170300}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GameClock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
