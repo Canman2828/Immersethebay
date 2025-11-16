@@ -161,7 +161,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Die
+  m_Name: Harpy Die
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -241,7 +241,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Move
+  m_Name: Harpy Fly
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -257,7 +257,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 3266516832551941757, guid: 5e6da23ce49cac544a255df0b2173292,
+  m_Motion: {fileID: 1171550557689094869, guid: d00a3e78cd4745a41a84b9c63b667328,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -270,7 +270,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Griffon Controller
+  m_Name: Harpy Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isAttacking
@@ -317,7 +317,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack
+  m_Name: Harpy Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -333,7 +333,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 4590686770146682101, guid: 5e6da23ce49cac544a255df0b2173292,
+  m_Motion: {fileID: -8468117868476013327, guid: d00a3e78cd4745a41a84b9c63b667328,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
