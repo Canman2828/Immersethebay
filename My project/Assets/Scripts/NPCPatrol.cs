@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class NPCPatrol : MonoBehaviour
@@ -42,12 +42,16 @@ public class NPCPatrol : MonoBehaviour
 
     void Update()
     {
-        // Don�t do anything if we somehow ended up off the NavMesh
+        // Don’t do anything if we somehow ended up off the NavMesh
         if (!agent.isOnNavMesh || agent.pathPending || waypoints == null || waypoints.Length == 0)
             return;
 
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        // "Close enough" distance so they don't jitter
+        float threshold = agent.stoppingDistance + 0.2f;
+
+        if (agent.remainingDistance <= threshold)
         {
+            // Optional wait at the waypoint
             if (waitTimeAtPoint > 0f)
             {
                 waitTimer += Time.deltaTime;
@@ -57,8 +61,19 @@ public class NPCPatrol : MonoBehaviour
                 waitTimer = 0f;
             }
 
-            currentIndex = (currentIndex + 1) % waypoints.Length;
-            agent.SetDestination(waypoints[currentIndex].position);
+            // ➜ Move to the next waypoint, but DO NOT loop back to 0
+            currentIndex++;
+
+            if (currentIndex < waypoints.Length)
+            {
+                agent.SetDestination(waypoints[currentIndex].position);
+            }
+            else
+            {
+                // Reached the final waypoint: stop moving
+                agent.isStopped = true;
+                enabled = false;   // optional: turn off this script
+            }
         }
     }
 }
